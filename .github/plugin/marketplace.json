@@ -1,0 +1,13 @@
+{
+  "name": "moneybruh",
+  "owner": { "name": "Money Bruh" },
+  "metadata": { "description": "Money Bruh read-only finance skills and MCP connection setup." },
+  "plugins": [
+    {
+      "name": "moneybruh",
+      "description": "Query Money Bruh transactions, observed spending, and stored balances.",
+      "version": "0.1.0",
+      "source": "./packages/copilot"
+    }
+  ]
+}

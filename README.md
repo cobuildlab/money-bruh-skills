@@ -1,10 +1,29 @@
 # Money Bruh agent integrations
 
 - **Purpose:** Connect coding agents to Money Bruh and reuse transaction, spending, and balance workflows.
-- **Version:** 0.1.0; local/repository distribution; no public marketplace publication yet.
+- **Version:** 0.1.0; repository-hosted marketplaces and downloadable release packages; official directory submission not performed.
 - **Access:** Money Bruh account with verified email/phone, eligible subscription, MCP URL, and API key from signed-in `/api` page.
 
 ## Install
+
+Register repository marketplace, then install skill plugin for your client:
+
+```sh
+# Codex
+codex plugin marketplace add cobuildlab/money-bruh-skills
+codex plugin add moneybruh@moneybruh
+
+# Claude Code
+claude plugin marketplace add cobuildlab/money-bruh-skills
+claude plugin install moneybruh@moneybruh
+
+# GitHub Copilot CLI
+copilot plugin marketplace add cobuildlab/money-bruh-skills
+copilot plugin install moneybruh@moneybruh
+```
+
+- **Authentication:** Complete matching setup guide below after plugin installation.
+- **Downloads:** [v0.1.0 GitHub release](https://github.com/cobuildlab/money-bruh-skills/releases/tag/v0.1.0) includes four package ZIPs and SHA-256 checksums.
 
 | Client                       | Guide                                          | Package                 |
 | ---------------------------- | ---------------------------------------------- | ----------------------- |
@@ -38,7 +57,7 @@ npm run check-generated
 - **Adapters:** Edit `modules/agent-integrations/adapters/`; shared onboarding lives under `adapters/common/`.
 - **Generated files:** Regenerate `packages/`; preserve generated files in repository for installation without build tools.
 - **Client runtime:** Node 24 runs optional decimal summarizer; client calculator fallback supports environments without Node.
-- **Release version:** Change root `package.json` and lockfile consistently, then regenerate all adapters.
+- **Release version:** Change root `package.json`, lockfile, and three root marketplace catalogs consistently, then regenerate all adapters.
 - **Tests:** Synthetic fixtures; no production endpoint or credentials required.
 - **Maintenance:** Read [module instructions](modules/agent-integrations/AGENTS.md) before changes.
 - **License:** No license grant declared; owner must choose before public release.

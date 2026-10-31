@@ -1,11 +1,15 @@
 import { fileURLToPath } from "node:url";
 import { buildPackages, checkGenerated } from "./services.ts";
 import { validatePackages } from "./validation.ts";
+import { validateCatalogs } from "./catalogs.ts";
 
 const root = fileURLToPath(new URL("../../", import.meta.url));
 const actions = {
   build: buildPackages,
-  validate: validatePackages,
+  validate: async (root: string) => {
+    await validatePackages(root);
+    await validateCatalogs(root);
+  },
   "check-generated": checkGenerated,
 };
 const command = process.argv[2];

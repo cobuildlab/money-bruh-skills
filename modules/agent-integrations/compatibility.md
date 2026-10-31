@@ -1,7 +1,7 @@
 # Compatibility evidence
 
 - **Date:** 2026-10-30.
-- **Release:** 0.1.0; local/repository packages; public marketplace submission not performed.
+- **Release:** 0.1.0; repository-hosted marketplace catalogs and package archives; official directory submission not performed.
 - **Credentials:** Native checks use no customer credentials or live Money Bruh endpoint.
 
 ## Client checks
@@ -9,9 +9,9 @@
 | Client          | Installed version | Evidence                                                                                       | Limits                                                                                            |
 | --------------- | ----------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | Codex           | 0.165.0-alpha.1.2 | Native MCP config accepted as Streamable HTTP with Bearer env reference                        | Plugin load and authenticated tool call unverified                                                |
-| Claude Code     | 2.0.76            | Native plugin manifest validation passed                                                       | Server discovery, skill triggering, and authenticated call unverified                             |
+| Claude Code     | 2.0.76            | Native plugin and root marketplace manifest validation passed                                  | Server discovery, skill triggering, and authenticated call unverified                             |
 | OpenCode        | 2.0.32            | Version command passed with temporary XDG directories; static config/package validation passed | Native config inspection failed during service startup; loading and authenticated call unverified |
-| Copilot CLI     | 1.0.84-5          | Local `--plugin-dir` mount listed Money Bruh 0.1.0 enabled                                     | Tool discovery, skill triggering, and authenticated call unverified                               |
+| Copilot CLI     | 1.0.84-5          | Isolated root marketplace install passed; one skill installed and Money Bruh 0.1.0 enabled     | Tool discovery, skill triggering, and authenticated call unverified                               |
 | Copilot VS Code | Not inspected     | Harness-specific examples validated structurally against current docs                          | UI loading and authenticated call unverified                                                      |
 
 ## Native commands
@@ -28,7 +28,7 @@ codex -c 'mcp_servers.moneybruh.url="https://example.invalid/mcp"' -c 'mcp_serve
 
 ## Package checks
 
-- **Automated:** Eleven tests cover decimal arithmetic, malformed records, CLI errors and unsupported commands, deterministic regeneration, output drift, package closure, symlinks, auth config, transport, endpoint, and version drift.
+- **Automated:** Twelve tests cover decimal arithmetic, malformed records, CLI errors and unsupported commands, deterministic regeneration, output drift, package closure, symlinks, auth config, transport, endpoint, version drift, and marketplace catalog targets.
 - **Skill validation:** Official Agent Skills validator passed; approximately 1817 tokens across four referenced Markdown files.
 - **Scope:** Static validation checks named connection entries and expected package structure; it is not a general secret scanner or upstream JSON Schema validator.
 - **Backend:** No server changes or provider verification included.
@@ -45,3 +45,8 @@ codex -c 'mcp_servers.moneybruh.url="https://example.invalid/mcp"' -c 'mcp_serve
 - **Review:** Whole-change review found no Critical/Important code defects; skill review identified missing workflow task tracking, addressed in canonical skill.
 - **CLI regression:** Dispatcher rejects missing, unknown, and inherited commands with a usage error and nonzero exit; regression reproduced before fix and passed afterward.
 - **Live verification:** Complete install guide's explicit balance request with an eligible account to verify each client end-to-end.
+
+## Release archives
+
+- **Integrity:** Four ZIPs extracted and compared byte-for-byte with generated packages; extracted packages passed validation.
+- **Checksums:** SHA256SUMS verified all four ZIPs before upload.

@@ -4,6 +4,7 @@
 - **Sources:** Edit `skills/moneybruh/` and `adapters/`; `packages/` contains generated distributions.
 - **Commands:** Node 24 with npm; run format, build, format-check, type-check, test, validate, and check-generated before delivery.
 - **Versions:** Root package version drives every adapter; keep lockfile consistent.
+- **Catalogs:** Root `.agents/plugins/`, `.claude-plugin/`, and `.github/plugin/` catalogs target Codex, Claude Code, and Copilot respectively; keep versions aligned and validate paths before release.
 - **Secrets:** Ship only supported secret references; use synthetic credentials in native client checks; never inspect customer credentials for package tests.
 - **Auth:** Codex native config uses `bearer_token_env_var`; Claude uses `${MONEYBRUH_API_KEY}`; OpenCode uses `{env:MONEYBRUH_API_KEY}` with OAuth disabled.
 - **Copilot:** Native user HTTP headers support env expansion; remote plugin configuration may keep placeholders literal; keep connection separate from skill plugin.
