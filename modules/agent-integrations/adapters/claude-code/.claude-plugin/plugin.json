@@ -1,0 +1,8 @@
+{
+  "name": "moneybruh",
+  "version": "{{VERSION}}",
+  "description": "Query Money Bruh transactions, observed spending, and stored balances.",
+  "author": { "name": "Money Bruh" },
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

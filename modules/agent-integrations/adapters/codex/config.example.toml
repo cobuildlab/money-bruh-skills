@@ -1,0 +1,3 @@
+[mcp_servers.moneybruh]
+url = "https://YOUR_API_HOST/mcp"
+bearer_token_env_var = "MONEYBRUH_API_KEY"

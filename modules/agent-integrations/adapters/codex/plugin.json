@@ -1,0 +1,15 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "moneybruh",
+  "version": "{{VERSION}}",
+  "description": "Query Money Bruh transactions, observed spending, and stored balances.",
+  "author": { "name": "Money Bruh" },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Money Bruh",
+        "shortDescription": "Transactions, spending, and account balances"
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "accounts": [
+    {
+      "id": "synthetic-checking",
+      "name": "Checking",
+      "type": "depository",
+      "subtype": "checking",
+      "currencyCode": "USD",
+      "currentBalance": 120,
+      "availableBalance": null,
+      "institutionName": "Example Bank"
+    },
+    {
+      "id": "synthetic-credit",
+      "name": "Credit",
+      "type": "credit",
+      "subtype": "credit card",
+      "currencyCode": "USD",
+      "currentBalance": 40,
+      "availableBalance": 960,
+      "institutionName": "Example Bank"
+    }
+  ]
+}

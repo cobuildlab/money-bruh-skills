@@ -1,0 +1,11 @@
+{
+  "name": "moneybruh",
+  "version": "{{VERSION}}",
+  "description": "Query Money Bruh transactions, observed spending, and stored balances.",
+  "author": { "name": "Money Bruh" },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Money Bruh",
+    "shortDescription": "Transactions, spending, and account balances"
+  }
+}

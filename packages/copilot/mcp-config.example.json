@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "moneybruh": {
+      "type": "http",
+      "url": "https://YOUR_API_HOST/mcp",
+      "tools": ["moneybruh_list_transactions", "moneybruh_account_balances"],
+      "headers": { "Authorization": "Bearer ${MONEYBRUH_API_KEY}" }
+    }
+  }
+}

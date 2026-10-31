@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "moneybruh": {
+      "type": "http",
+      "url": "${MONEYBRUH_MCP_URL}",
+      "headers": { "Authorization": "Bearer ${MONEYBRUH_API_KEY}" }
+    }
+  }
+}

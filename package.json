@@ -1,0 +1,23 @@
+{
+  "name": "money-bruh-skills",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "build": "node modules/agent-integrations/cli.ts build",
+    "validate": "node modules/agent-integrations/cli.ts validate",
+    "check-generated": "node modules/agent-integrations/cli.ts check-generated",
+    "test": "node --test modules/agent-integrations/*.test.ts",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format-check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "prettier": "^3.6.0",
+    "typescript": "^5.9.0"
+  }
+}
